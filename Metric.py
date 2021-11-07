@@ -27,8 +27,8 @@ def MSE(vY, vHatY):
     from sklearn.metrics import mean_squared_error
 
     N    = len(vY)
-    loss = mean_squared_error(vY, vHatY)
-    vDy  = ???
+    loss = mean_squared_error(vHatY, vY)
+    vDy  = 2*(vHatY - vY)/N
 
     return loss, vDy
 #--------------------------------------------------------------------------------#
