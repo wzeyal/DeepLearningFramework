@@ -24,11 +24,9 @@ def MSE(vY, vHatY):
     '''
     Returns both the loss and the gradient w.r.t the input (vHatY)
     '''
-        from sklearn.metrics import mean_squared_error
-
-        N    = len(vY)
-        loss = np.linalg.norm(vHatY - vY)**2 / N
-        vDy  = 2*(vHatY - vY)/N
+    N    = len(vY)
+    loss = np.linalg.norm(vHatY - vY)**2 / N
+    vDy  = 2*(vHatY - vY)/N
 
     return loss, vDy
 #--------------------------------------------------------------------------------#
